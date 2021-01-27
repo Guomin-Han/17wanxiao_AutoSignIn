@@ -133,7 +133,7 @@ def check_in(token):
 def WechatPush(title, sckey, success, fail, result):
     send_url = f"https://sc.ftqq.com/{sckey}.send"
     strTime = GetNowTime()
-    takeit = result.json()
+    takeit = result.text()
     page = json.dumps(result, sort_keys=True, indent=4, separators=(',', ':'), ensure_ascii=False)
     content = [f"""`{strTime}`
 #### 打卡成功用户:
