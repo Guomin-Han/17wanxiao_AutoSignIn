@@ -4,7 +4,6 @@ import requests
 import datetime
 from campus import CampusCard
 
-
 def main():
     # sectets字段录入
     username_list = os.environ['USERNAME'].split(',')
