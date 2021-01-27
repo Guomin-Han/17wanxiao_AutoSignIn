@@ -43,8 +43,8 @@ class CampusCard:
             'exchangeFlag': True,
             'login': False,
             'serverPublicKey': '',
-            'deviceId': 868146026942328,
-            'wanxiaoVersion': 10531102,
+            'deviceId': 862848049379588,
+            'wanxiaoVersion': 10534101,
             'rsaKey': {
                 'private': rsa_keys[1],
                 'public': rsa_keys[0]
@@ -59,7 +59,7 @@ class CampusCard:
         resp = requests.post(
             "https://app.17wanxiao.com/campus/cam_iface46/exchangeSecretkey.action",
             headers={
-                "User-Agent": "NCP/5.3.1 (iPhone; iOS 13.5; Scale/2.00)",
+                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; BKL-AL20 Build/HUAWEIBKL-AL20)",
             },
             json={
                 "key": self.user_info["rsaKey"]["public"]
@@ -90,13 +90,13 @@ class CampusCard:
             "password": password_list,
             "qudao": "guanwang",
             "requestMethod": "cam_iface46/loginnew.action",
-            "shebeixinghao": "iPhoneXR",
-            "systemType": "iOS",
-            "telephoneInfo": "13.5",
-            "telephoneModel": "iPhone",
+            "shebeixinghao": "BKL-AL20",
+            "systemType": "Android",
+            "telephoneInfo": "10",
+            "telephoneModel": "HUAWEIBKL-AL20",
             "type": "1",
             "userName": phone,
-            "wanxiaoVersion": 10531102,
+            "wanxiaoVersion": 10534101,
             "yunyingshang": "07"
         }
         upload_args = {
