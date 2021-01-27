@@ -20,9 +20,12 @@ jobs:
       run: |
         pip install -r requirements.txt
        
- 
-    - name: Run
-      run: |
-        python3 main.py <<EOF
-        ${{secrets.USERS}}
-        EOF
+    - name: HealthyCheckIn
+      run: python3 main.py
+      env:
+        USERNAME: ${{secrets.USERNAME}}
+        PASSWORD: ${{secrets.PASSWORD}}
+        SCKEY: ${{secrets.SCKEY}}
+        SEND_EMAIL: ${{secrets.SEND_EMAIL}}
+        SEND_PWD: ${{secrets.SEND_PWD}}
+        RECEIVE_EMAIL: ${{secrets.RECEIVE_EMAIL}}
